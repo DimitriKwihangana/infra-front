@@ -66,10 +66,12 @@ const SignUpForm = () => {
     const [password, setPassword] = useState('');
     const [phone,setPhone] = useState(null)
     const [location, setLocation] = useState('')
+    const [loading, setLoading] = useState(false)
    const navigate = useNavigate()
  
 
     const handleSignUp = async (e) => {
+        setLoading(true)
         e.preventDefault();
         try {
             const response = await axios.post('https://infra-back.onrender.com/auth/register', {
@@ -83,6 +85,7 @@ const SignUpForm = () => {
             localStorage.setItem('token', response.data.token);
             // Redirect to dashboard or home page
             console.log(response)
+            setLoading(false)
             navigate("/login")
         } catch (error) {
 
