@@ -10,7 +10,7 @@ const Profile = () => {
         const fetchUserData = async () => {
           try {
             const response = await axios.get(
-              `http://127.0.0.1:3001/auth/user/${id}`
+              `https://infra-back.onrender.com/auth/user/${id}`
             );
             setLoginData(response.data.user)
             console.log(loginData)
@@ -52,7 +52,7 @@ const navigate = useNavigate()
     try {
       
           const response = await axios.put(
-              `http://127.0.0.1:3001/auth/update/${id}`,
+              `https://infra-back.onrender.com/auth/update/${id}`,
               {
                 location:location,
                 name:name,

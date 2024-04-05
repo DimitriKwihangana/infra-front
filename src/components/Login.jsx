@@ -12,7 +12,7 @@ const LoginForm = () => {
         setLoading(true)
         try {
             console.log('start')
-            const response = await axios.post('http://127.0.0.1:3001/auth/login', {
+            const response = await axios.post('https://infra-back.onrender.com/auth/login', {
                 email,
                 password
             });
@@ -72,7 +72,7 @@ const SignUpForm = () => {
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://127.0.0.1:3001/auth/register', {
+            const response = await axios.post('https://infra-back.onrender.com/auth/register', {
                 name,
                 email,
                 password,

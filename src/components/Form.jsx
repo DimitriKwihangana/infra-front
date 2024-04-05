@@ -113,7 +113,7 @@ const FormComponent = ({locationData}) => {
                 formData.append('priority', priority);
         
                 const response = await axios.post(
-                    "http://127.0.0.1:3001/infra/articles",
+                    "https://infra-back.onrender.com/infra/articles",
                     formData,
                     {
                         headers: {

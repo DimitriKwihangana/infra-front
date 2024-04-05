@@ -9,7 +9,7 @@ function DashboardCard07() {
     const fetchArticles = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:3001/infra/articles"
+          "https://infra-back.onrender.com/infra/articles"
         );
         setArticles(response.data, "data");
       } catch (error) {
@@ -41,7 +41,7 @@ const handlepriority = (selectedOption) =>{
     try {
       
           const response = await axios.put(
-              `http://127.0.0.1:3001/infra/articles/update/${id}`,
+              `https://infra-back.onrender.com/infra/articles/update/${id}`,
               {
                 email:email,
                 priority:priority,
@@ -54,6 +54,7 @@ const handlepriority = (selectedOption) =>{
           alert("the user is notified")
       } catch (err) {
         setLoading(false)
+        alert("nopeee")
           console.log(err);
       }
   };
