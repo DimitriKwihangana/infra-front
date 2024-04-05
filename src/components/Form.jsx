@@ -124,6 +124,7 @@ const FormComponent = ({locationData}) => {
                 setLoading(false)
                 setSelectedProvince(null)
                 console.log(response);
+                alert("POSTED")
             } catch (err) {
               setLoading(false)
                 console.log(err);
